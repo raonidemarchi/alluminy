@@ -9,23 +9,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: 10.x
+#     - name: Set Node.js
+#       uses: actions/setup-node@master
+#       with:
+#         node-version: 10.x
 
-    - name: Install dependencies
-      run: npm i
+#     - name: Install dependencies
+#       run: npm i
 
-    - name: Build project
-      run: npm run build
+#     - name: Build project
+#       run: npm run build
 
-    - name: Deploy 🚀
-      uses: raonidemarchi/alluminy@master
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: public
+#     - name: Deploy 🚀
+#       uses: raonidemarchi/alluminy@master
+#       with:
+#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#         BRANCH: gh-pages
+#         FOLDER: public

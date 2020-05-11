@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: `/alluminy`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Alluminy · Esquadrias de Alumínio`,
+    description: `A Alluminy é uma empresa que atua há mais de 15 anos no mercado de fabricação e instalação de esquadrias de alumínio sob medida, e atende projetos dos mais variados tipos, que incluem edifícios residenciais, comerciais, industriais, além de residências de alto e médio padrão, clubes, academias, entre outros.`,
+    author: `@raonidemarchi`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

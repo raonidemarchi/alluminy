@@ -19,6 +19,12 @@ jobs:
 
     - name: Install dependencies
       run: npm i
+    
+    - name: Login e-mail
+      run: git config --global user.email "raonidemarchi@gmail.com"
+    
+    - name: Login name
+      run: git config --global user.name "Raoni Demarchi"
 
     - name: Deploy
       run: npm run deploy

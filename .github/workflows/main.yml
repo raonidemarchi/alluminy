@@ -1,4 +1,4 @@
-name: deploy site
+name: deploy project
 
 on:
   push:
@@ -10,7 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
     - name: Set Node.js
       uses: actions/setup-node@master
@@ -18,15 +21,14 @@ jobs:
         node-version: 10.x
 
     - name: Install dependencies
-      run: npm i
-    
-    - name: Login e-mail
-      run: git config --global user.email "raonidemarchi@gmail.com"
-    
-    - name: Login name
-      run: git config --global user.name "raonidemarchi"
+      run: npm install
 
-    - name: Deploy
-      run: npm run deploy
-      env:
-        DEPLOY_KEY: ${{ secrets.deploy_key }}
+    - name: Build project
+      run: npm run build
+
+    - name: Deploy 🚀
+      uses: raonidemarchi/alluminy@master
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: public

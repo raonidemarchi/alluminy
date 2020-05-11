@@ -10,9 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: raonidemarchi/alluminy
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
+    - uses: actions/checkout@v2
+
+    - name: Set Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 10.x
+        access-token: ${{ secrets.ACCESS_TOKEN }}
+
+    - name: Install dependencies
+      run: npm i
+
+    - name: Deploy
+      run: npm run deploy

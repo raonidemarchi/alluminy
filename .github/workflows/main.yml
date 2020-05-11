@@ -21,6 +21,6 @@ jobs:
       run: npm i
 
     - name: Deploy
-      run: npm run deploy
+      run: docker-compose run deploy
       env:
         access-token: ${{ secrets.ACCESS_TOKEN }}

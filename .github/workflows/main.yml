@@ -24,7 +24,7 @@ jobs:
       run: git config --global user.email "raonidemarchi@gmail.com"
     
     - name: Login name
-      run: git config --global user.name "Raoni Demarchi"
+      run: git config --global user.name "raonidemarchi"
 
     - name: Deploy
       run: npm run deploy

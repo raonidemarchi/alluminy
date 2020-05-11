@@ -16,10 +16,11 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: 10.x
-        access-token: ${{ secrets.ACCESS_TOKEN }}
 
     - name: Install dependencies
       run: npm i
 
     - name: Deploy
       run: npm run deploy
+      env:
+        access-token: ${{ secrets.ACCESS_TOKEN }}

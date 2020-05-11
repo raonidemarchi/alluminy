@@ -15,10 +15,10 @@ jobs:
       with:
         persist-credentials: false
 
-#     - name: Set Node.js
-#       uses: actions/setup-node@master
-#       with:
-#         node-version: 10.x
+    - name: Set Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 10.x
 
 #     - name: Install dependencies
 #       run: npm i

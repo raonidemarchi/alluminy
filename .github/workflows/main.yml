@@ -21,9 +21,9 @@ jobs:
     - name: Build project
       run: npm run build
 
-#     - name: Deploy 🚀
-#       uses: raonidemarchi/alluminy@master
-#       with:
-#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    - name: Deploy 🚀
+      uses: raonidemarchi/alluminy@master
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #         BRANCH: gh-pages
 #         FOLDER: public

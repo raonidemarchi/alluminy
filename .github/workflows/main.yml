@@ -1,4 +1,4 @@
-name: deploy
+name: deploy site
 
 on:
   push:
@@ -10,9 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: raonidemarchi/alluminy@v1
+    - uses: actions/checkout@v2
+
+    - name: Set Node.js
+      uses: actions/setup-node@master
       with:
-        access-token: ${{ secrets.ACCESS_TOKEN }}
-        deploy-branch: gh-pages
-        gatsby-args: --prefix-paths
+        node-version: 10.x
+
+    - name: Install dependencies
+      run: npm i
+
+    - name: Deploy
+      run: npm run deploy

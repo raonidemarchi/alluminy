@@ -10,15 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Set Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: 10.x
-
-    - name: Install dependencies
-      run: npm i
-
-    - name: Deploy
-      run: npm run deploy
+      - uses: actions/checkout@v2
+      # - uses: raonidemarchi/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
+          gatsby-args: --prefix-paths

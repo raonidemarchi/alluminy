@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import { Navbar, Nav } from "react-bootstrap"
 
-export const Link = styled.a`
+export const NavLink = styled(Nav.Link)`
   font-size: 14px;
   text-transform: uppercase;
 `
 
-export const Toggler = styled.button`
+export const NavbarToggle = styled(Navbar.Toggle)`
   border: none;
 `

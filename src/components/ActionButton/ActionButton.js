@@ -1,8 +1,8 @@
 import React from "react"
-import styles from "./ActionButtonStyles"
+import { Button } from "./ActionButtonStyles"
 
-const ActionButton = ({ children, className }) => (
-  <button className={`btn ${styles.button} ${className}`}>{children}</button>
+const ActionButton = ({ children = "", className = "" }) => (
+  <Button className={`btn ${className}`}>{children}</Button>
 )
 
 export default ActionButton

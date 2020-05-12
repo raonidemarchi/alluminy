@@ -4,9 +4,9 @@ import { Navbar } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <Navbar className="shadow-sm bg-white">
+    <Navbar fixed="top" className="shadow-sm bg-white">
       <div className="container">
-        <Navbar.Brand href="#home">Alluminy</Navbar.Brand>
+        <Navbar.Brand>Alluminy</Navbar.Brand>
       </div>
     </Navbar>
   </header>

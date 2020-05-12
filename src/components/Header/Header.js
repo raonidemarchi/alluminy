@@ -1,23 +1,14 @@
-import PropTypes from "prop-types"
 import React from "react"
-import { Navbar } from "react-bootstrap"
+import { Navbar, Container } from "react-bootstrap"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
-    <Navbar fixed="top" className="shadow-sm bg-white">
-      <div className="container">
+    <Navbar fixed="top" bg="white" className="shadow-sm">
+      <Container>
         <Navbar.Brand>Alluminy</Navbar.Brand>
-      </div>
+      </Container>
     </Navbar>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

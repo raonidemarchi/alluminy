@@ -1,8 +1,8 @@
 import React from "react"
-import { Button } from "./ActionButtonStyles"
+import { PrimaryButton } from "./ActionButtonStyles"
 
 const ActionButton = ({ children = "", className = "" }) => (
-  <Button className={`btn ${className}`}>{children}</Button>
+  <PrimaryButton className={className}>{children}</PrimaryButton>
 )
 
 export default ActionButton

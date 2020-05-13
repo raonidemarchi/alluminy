@@ -1,6 +1,7 @@
+import { Button } from "react-bootstrap"
 import styled from "styled-components"
 
-export const Button = styled.button`
+export const PrimaryButton = styled(Button)`
   padding: 14px 20px !important;
   font-size: 12px !important;
   text-transform: uppercase;
@@ -11,9 +12,10 @@ export const Button = styled.button`
   border-radius: 2px;
 
   &:hover {
-    color: #fff;
+    opacity: 0.84;
   }
 
+  &:not(:disabled):not(.disabled):active:focus,
   &:focus {
     box-shadow: 0 0 0 0.2rem rgba(75, 223, 216, 0.5);
   }

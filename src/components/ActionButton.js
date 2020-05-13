@@ -24,16 +24,17 @@ const PrimaryButton = styled(Button)`
   }
 `
 
-const ActionButton = ({
-  children = "",
-  className = "",
-  height = "",
-  width = "",
-}) => (
+const ActionButton = ({ children, className, height, width }) => (
   <PrimaryButton height={height} width={width} className={className}>
     {children}
   </PrimaryButton>
 )
+
+ActionButton.defaultProps = {
+  className: "",
+  height: "",
+  width: "",
+}
 
 ActionButton.propTypes = {
   children: PropTypes.node.isRequired,

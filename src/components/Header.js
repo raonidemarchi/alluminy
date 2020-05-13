@@ -4,6 +4,8 @@ import styled from "styled-components"
 
 import ActionButton from "./ActionButton"
 
+import logo from "../images/logo.png"
+
 const NavLink = styled(Nav.Link)`
   font-size: 14px;
   text-transform: uppercase;
@@ -15,9 +17,16 @@ const NavbarToggle = styled(Navbar.Toggle)`
 
 const Header = () => (
   <header>
-    <Navbar bg="white" expand="md" fixed="top" className="py-3 shadow-sm">
+    <Navbar bg="white" expand="md" fixed="top" className="shadow-sm">
       <Container>
-        <Navbar.Brand href="#home">Alluminy</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <img
+            src={logo}
+            height="50"
+            className="d-inline-block align-top"
+            alt="Alluminy Esquadrias de Alumínio"
+          />
+        </Navbar.Brand>
         <NavbarToggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse
           className="justify-content-end"

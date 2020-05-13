@@ -36,7 +36,7 @@ const Header = () => (
             <NavLink className="nav-link py-3 py-md-0 px-3" href="#obras">
               Obras
             </NavLink>
-            <ActionButton className="ml-4 mr-4 my-3 my-md-0 mr-md-0">
+            <ActionButton className="d-none d-md-block ml-4">
               Entre em contato
             </ActionButton>
           </Nav>

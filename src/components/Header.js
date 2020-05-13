@@ -6,6 +6,12 @@ import ActionButton from "./ActionButton"
 
 import logo from "../images/logo.png"
 
+const Image = styled.img`
+  @media (min-width: 768px) {
+    height: 50px;
+  }
+`
+
 const NavLink = styled(Nav.Link)`
   font-size: 14px;
   text-transform: uppercase;
@@ -20,9 +26,9 @@ const Header = () => (
     <Navbar bg="white" expand="md" fixed="top" className="shadow-sm">
       <Container>
         <Navbar.Brand href="#home">
-          <img
+          <Image
             src={logo}
-            height="50"
+            height="30"
             className="d-inline-block align-top"
             alt="Alluminy Esquadrias de Alumínio"
           />

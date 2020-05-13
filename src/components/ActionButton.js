@@ -1,9 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Button } from "react-bootstrap"
 import styled from "styled-components"
 
 const PrimaryButton = styled(Button)`
-  padding: 14px 20px !important;
   font-size: 12px !important;
   text-transform: uppercase;
   font-weight: bold;
@@ -11,6 +11,8 @@ const PrimaryButton = styled(Button)`
   border: 0;
   color: #fff;
   border-radius: 2px;
+  height: ${({ height }) => height || "50px"};
+  width: ${({ width }) => width || "172px"};
 
   &:hover {
     opacity: 0.84;
@@ -22,8 +24,22 @@ const PrimaryButton = styled(Button)`
   }
 `
 
-const ActionButton = ({ children = "", className = "" }) => (
-  <PrimaryButton className={className}>{children}</PrimaryButton>
+const ActionButton = ({
+  children = "",
+  className = "",
+  height = "",
+  width = "",
+}) => (
+  <PrimaryButton height={height} width={width} className={className}>
+    {children}
+  </PrimaryButton>
 )
+
+ActionButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.node,
+  height: PropTypes.node,
+  width: PropTypes.node,
+}
 
 export default ActionButton

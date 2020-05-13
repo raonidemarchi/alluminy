@@ -1,7 +1,8 @@
+import React from "react"
 import { Button } from "react-bootstrap"
 import styled from "styled-components"
 
-export const PrimaryButton = styled(Button)`
+const PrimaryButton = styled(Button)`
   padding: 14px 20px !important;
   font-size: 12px !important;
   text-transform: uppercase;
@@ -20,3 +21,9 @@ export const PrimaryButton = styled(Button)`
     box-shadow: 0 0 0 0.2rem rgba(75, 223, 216, 0.5);
   }
 `
+
+const ActionButton = ({ children = "", className = "" }) => (
+  <PrimaryButton className={className}>{children}</PrimaryButton>
+)
+
+export default ActionButton

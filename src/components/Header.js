@@ -1,7 +1,17 @@
 import React from "react"
-import ActionButton from "../ActionButton/ActionButton"
 import { Nav, Navbar, Container } from "react-bootstrap"
-import { NavLink, NavbarToggle } from "./HeaderStyles"
+import styled from "styled-components"
+
+import ActionButton from "./ActionButton"
+
+const NavLink = styled(Nav.Link)`
+  font-size: 14px;
+  text-transform: uppercase;
+`
+
+const NavbarToggle = styled(Navbar.Toggle)`
+  border: none;
+`
 
 const Header = () => (
   <header>
@@ -17,7 +27,10 @@ const Header = () => (
             <NavLink className="nav-link py-3 py-md-0 px-3" href="#projetos">
               Projetos
             </NavLink>
-            <NavLink className="nav-link py-3 py-md-0 px-3" href="#diferenciais">
+            <NavLink
+              className="nav-link py-3 py-md-0 px-3"
+              href="#diferenciais"
+            >
               Diferenciais
             </NavLink>
             <NavLink className="nav-link py-3 py-md-0 px-3" href="#obras">

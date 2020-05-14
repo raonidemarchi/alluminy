@@ -1,12 +1,17 @@
 import React from "react"
 import ActionButton from "./ActionButton"
+import styled from "styled-components"
+
+const Aside = styled.aside`
+  box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+`
 
 const ActionButtonFooter = () => (
-  <aside className="d-md-none fixed-bottom shadow">
+  <Aside className="d-md-none fixed-bottom">
     <ActionButton className="rounded-0" width="100%" height="60px">
       Entre em contato
     </ActionButton>
-  </aside>
+  </Aside>
 )
 
 export default ActionButtonFooter

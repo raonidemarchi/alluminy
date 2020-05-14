@@ -8,18 +8,21 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Head from "./Head"
 import Header from "./Header"
 import ActionButtonFooter from "./ActionButtonFooter"
+import { devices } from "../styles/devices"
 
 const Main = styled.main`
-  margin-top: 80px;
+  margin-top: 76px;
+
+  @media ${devices.small} {
+    margin-top: 56px;
+  }
 `
 
 const Layout = ({ children }) => (
   <>
     <Head />
     <Header />
-    <Main>
-      <Container>{children}</Container>
-    </Main>
+    <Main>{children}</Main>
     <ActionButtonFooter />
     <footer></footer>
   </>

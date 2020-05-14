@@ -3,12 +3,13 @@ import { Nav, Navbar, Container } from "react-bootstrap"
 import styled from "styled-components"
 
 import ActionButton from "./ActionButton"
+import { devices } from "../styles/devices"
 
 import logo from "../images/logo.png"
 
 const Image = styled.img`
-  @media (min-width: 768px) {
-    height: 50px;
+  @media ${devices.small} {
+    height: 30px;
   }
 `
 
@@ -28,7 +29,7 @@ const Header = () => (
         <Navbar.Brand href="#home">
           <Image
             src={logo}
-            height="30"
+            height="50"
             className="d-inline-block align-top"
             alt="Alluminy Esquadrias de Alumínio"
           />

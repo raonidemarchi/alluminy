@@ -12,7 +12,9 @@ const Section = styled.section`
   color: #fff;
   background-image: url("${banner}");
   background-position: center;
-  box-shadow: inset 0 980px 350px rgba(33, 71, 101, 0.78);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 8980px 350px rgba(33, 71, 101, 0.78);
 
   h1 {
     text-transform: uppercase;

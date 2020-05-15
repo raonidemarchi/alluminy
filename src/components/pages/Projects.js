@@ -1,38 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 
-const Section = styled.section`
-  max-width: 600px;
-  padding: 4rem 2rem 5rem;
+import firstProject from "../../images/project-1.jpg"
 
-  p {
-    margin: 0;
-  }
-
-  h2 {
-    margin-bottom: 30px;
-    font-size: 38px;
-  }
+const RightImg = styled.div`
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  background-image: url('${({ src }) => src}');
+  background-position: center;
+  background-size: cover;
 `
 
 const WhoAreWe = () => (
-  <Section className="text-center container">
-    <h2 className="text-uppercase display-5">Quem somos</h2>
-    <p className="lead">
-      A Alluminy é uma empresa que atua há mais de 15 anos no mercado de
-      fabricação e instalação de esquadrias de alumínio sob medida, e atende
-      projetos dos mais variados tipos, que incluem edifícios residenciais,
-      comerciais, industriais, além de residências de alto e médio padrão,
-      clubes, academias, entre outros.
-    </p>
-    <hr className="my-5 border-light" />
-    <p className="lead">
-      Trabalhamos com uma ampla variedade de linhas de alumínio, como Master,
-      Mega, Suprema, Inova, Gold, Única, e não só atuamos com portas e janelas,
-      também atendemos projetos especiais como fachadas glazing, cortina, guarda
-      corpos e brises.
-    </p>
-  </Section>
+  <section className="bg-light py-5">
+    <div></div>
+    <RightImg src={firstProject}></RightImg>
+  </section>
 )
 
 export default WhoAreWe

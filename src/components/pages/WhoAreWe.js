@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Section = styled.section`
   max-width: 600px;
-  padding: 4rem 3rem 5rem;
+  padding: 4rem 6% 5rem;
 
   p {
     margin: 0;
@@ -16,7 +16,7 @@ const Section = styled.section`
 `
 
 const WhoAreWe = () => (
-  <Section className="text-center p-6 container">
+  <Section className="text-center container">
     <h2 className="text-uppercase display-5">Quem somos</h2>
     <p className="lead">
       A Alluminy é uma empresa que atua há mais de 15 anos no mercado de

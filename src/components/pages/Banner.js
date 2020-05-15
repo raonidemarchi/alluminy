@@ -1,20 +1,26 @@
 import React from "react"
 import styled from "styled-components"
 
-import { devices } from "../../styles/devices"
+import { devices } from "../../constants"
 import ActionButton from "../ActionButton"
 
 import banner from "../../images/banner-1.jpg"
 
 const Section = styled.section`
-  height: calc(100vh - 76px);
   min-height: 400px;
   color: #fff;
   background-image: url("${banner}");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: inset 0 8980px 350px rgba(33, 71, 101, 0.78);
+
+  &, & > div {
+    height: calc(100vh - 76px);
+  }
+
+  & > div {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 
   h1 {
     text-transform: uppercase;
@@ -32,13 +38,15 @@ const Section = styled.section`
 `
 
 const Banner = () => (
-  <Section className="bg-dark d-flex justify-content-center align-items-center">
-    <div className="text-center">
-      <h1>Alluminy</h1>
-      <h2>esquadrias de alumínio</h2>
-      <ActionButton className="d-none d-md-inline">
-        Entre em contato
-      </ActionButton>
+  <Section>
+    <div className="d-flex justify-content-center align-items-center">
+      <div className="text-center">
+        <h1>Alluminy</h1>
+        <h2>esquadrias de alumínio</h2>
+        <ActionButton className="d-none d-md-inline">
+          Entre em contato
+        </ActionButton>
+      </div>
     </div>
   </Section>
 )

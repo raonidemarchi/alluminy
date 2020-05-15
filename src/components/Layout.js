@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Head from "./Head"
 import Header from "./Header"
 import ActionButtonFooter from "./ActionButtonFooter"
-import { devices } from "../styles/devices"
+import { devices } from "../constants"
 
 const Main = styled.main`
   margin-top: 76px;

@@ -3,7 +3,7 @@ import { Nav, Navbar, Container } from "react-bootstrap"
 import styled from "styled-components"
 
 import ActionButton from "./ActionButton"
-import { devices } from "../styles/devices"
+import { devices } from "../constants"
 
 import logo from "../images/logo.png"
 

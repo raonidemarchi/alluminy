@@ -31,7 +31,7 @@ const Section = styled.section`
   }
 `
 
-const FirstSection = () => (
+const Banner = () => (
   <Section className="bg-dark d-flex justify-content-center align-items-center">
     <div className="text-center">
       <h1>Alluminy</h1>
@@ -43,4 +43,4 @@ const FirstSection = () => (
   </Section>
 )
 
-export default FirstSection
+export default Banner

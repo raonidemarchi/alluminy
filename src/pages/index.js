@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
-import FirstSection from "../components/pages/FirstSection"
+import Banner from "../components/pages/Banner"
 
 const IndexPage = () => (
   <Layout>
-    <FirstSection />
+    <Banner />
   </Layout>
 )
 

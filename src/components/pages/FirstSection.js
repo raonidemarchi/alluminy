@@ -14,7 +14,7 @@ const Section = styled.section`
     text-transform: uppercase;
     font-size: 72px;
 
-    @media ${devices.small} {
+    @media ${devices.sm} {
       font-size: 48px;
     }
   }

@@ -8,7 +8,7 @@ import { devices } from "../styles/devices"
 import logo from "../images/logo.png"
 
 const Image = styled.img`
-  @media ${devices.small} {
+  @media ${devices.sm} {
     height: 30px;
   }
 `

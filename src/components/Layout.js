@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Container } from "react-bootstrap"
 import styled from "styled-components"
 
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -13,7 +12,7 @@ import { devices } from "../styles/devices"
 const Main = styled.main`
   margin-top: 76px;
 
-  @media ${devices.small} {
+  @media ${devices.sm} {
     margin-top: 56px;
   }
 `

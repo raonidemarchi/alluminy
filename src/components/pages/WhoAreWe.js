@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Section = styled.section`
   max-width: 600px;
-  padding: 4rem 6% 5rem;
+  padding: 4rem 2rem 5rem;
 
   p {
     margin: 0;

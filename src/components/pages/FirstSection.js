@@ -4,11 +4,15 @@ import styled from "styled-components"
 import { devices } from "../../styles/devices"
 import ActionButton from "../ActionButton"
 
+import banner from "../../images/banner-1.jpg"
+
 const Section = styled.section`
   height: calc(100vh - 76px);
   min-height: 400px;
   color: #fff;
-  font-weight: 100;
+  background-image: url("${banner}");
+  background-position: center;
+  box-shadow: inset 0 980px 350px rgba(33, 71, 101, 0.66);
 
   h1 {
     text-transform: uppercase;

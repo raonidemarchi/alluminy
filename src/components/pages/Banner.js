@@ -25,6 +25,7 @@ const Section = styled.section`
   h1 {
     text-transform: uppercase;
     font-size: 72px;
+    font-weight: 300;
 
     @media ${devices.sm} {
       font-size: 48px;
@@ -34,6 +35,7 @@ const Section = styled.section`
   h2 {
     margin-bottom: 30px;
     font-size: 20px;
+    font-weight: 300;
   }
 `
 

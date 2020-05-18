@@ -59,7 +59,7 @@ const WhoAreWe = () => (
           xl={3}
           className="text-center text-md-left py-4"
         >
-          <Title>RESIDENCIAIS</Title>
+          <Title>RESIDÊNCIAS</Title>
           <p className="lead">
             Trabalhamos na execução de residências de alto e médio padrão,
             fabricando e instalando portas, janelas, guarda corpo, portões, etc.

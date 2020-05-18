@@ -15,7 +15,7 @@ const Section = styled.section`
   }
 `
 
-const WhoAreWe = () => (
+const WhoWeAre = () => (
   <Section className="text-center container">
     <h2 className="text-uppercase display-5">Quem somos</h2>
     <p className="lead">
@@ -35,4 +35,4 @@ const WhoAreWe = () => (
   </Section>
 )
 
-export default WhoAreWe
+export default WhoWeAre

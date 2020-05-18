@@ -20,8 +20,8 @@ const OurAdvantages = () => (
   <Section className="text-center container">
     <h2 className="text-uppercase display-5">Nossos Diferenciais</h2>
     <p className="lead text-muted">
-      Fazemos tudo com atenção aos detalhes, desde a fabricação e instalação ao
-      acabamento.
+      Fazemos tudo com atenção aos detalhes, desde a fabricação e instalação até
+      o acabamento.
     </p>
   </Section>
 )

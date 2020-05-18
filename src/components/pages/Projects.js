@@ -19,15 +19,11 @@ const SectionContainer = styled(Container)`
 `
 
 const Img = styled.div`
-  padding-top: 66%;
+  padding-top: 74%;
   background-image: url('${({ src }) => src}');
   background-position: center;
   background-size: cover;
   margin: ${({ mt }) => mt || 0}px -15px 0;
-
-  @media ${devices.md} {
-    padding-top: 74%;
-  }
 `
 
 const Title = styled.h3`

@@ -24,6 +24,11 @@ const Img = styled.div`
   background-position: center;
   background-size: cover;
   margin: ${({ mt }) => mt || 0}px -15px 0;
+
+  @media ${devices.sm} {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
 `
 
 const Title = styled.h3`

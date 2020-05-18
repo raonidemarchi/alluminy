@@ -10,7 +10,6 @@ const Section = styled.section`
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 4rem;
-    font-weight: 300;
   }
 
   h2 {

@@ -26,6 +26,12 @@ function Head({ description, lang, meta, title }) {
         lang,
       }}
       title={title || site.siteMetadata.title}
+      script={[
+        {
+          src: `https://kit.fontawesome.com/9a48c7250f.js`,
+          crossorigin: `anonymous`,
+        },
+      ]}
       meta={[
         {
           name: `description`,

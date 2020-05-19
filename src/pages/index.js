@@ -5,6 +5,7 @@ import Banner from "../components/pages/Banner"
 import WhoWeAre from "../components/pages/WhoWeAre"
 import ProjectTypes from "../components/pages/ProjectTypes"
 import OurAdvantages from "../components/pages/OurAdvantages"
+import ProjectsGallery from "../components/pages/ProjectsGallery"
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <WhoWeAre />
     <ProjectTypes />
     <OurAdvantages />
+    {/* <ProjectsGallery /> */}
   </Layout>
 )
 

@@ -7,9 +7,11 @@ import { devices } from "../constants"
 
 import logo from "../images/logo.png"
 
-const Image = styled.img`
+const NavbarBrand = styled(Navbar.Brand)`
+  padding: 15px;
+
   @media ${devices.sm} {
-    height: 30px;
+    padding: 5px;
   }
 `
 
@@ -26,14 +28,14 @@ const Header = () => (
   <header>
     <Navbar bg="white" expand="md" fixed="top" className="shadow-sm">
       <Container>
-        <Navbar.Brand href="#home">
-          <Image
+        <NavbarBrand href="#home">
+          <img
             src={logo}
-            height="50"
+            height="30"
             className="d-inline-block align-top"
             alt="Alluminy Esquadrias de Alumínio"
           />
-        </Navbar.Brand>
+        </NavbarBrand>
         <NavbarToggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse
           className="justify-content-end"

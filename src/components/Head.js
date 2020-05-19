@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import favicon from "../images/favicon.png"
+
 function Head({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -30,6 +32,13 @@ function Head({ description, lang, meta, title }) {
         {
           src: `https://kit.fontawesome.com/9a48c7250f.js`,
           crossorigin: `anonymous`,
+        },
+      ]}
+      link={[
+        {
+          rel: `icon`,
+          type: `image/png`,
+          href: favicon,
         },
       ]}
       meta={[

@@ -8,7 +8,7 @@ import { devices } from "../constants"
 import logo from "../images/logo.png"
 
 const NavbarBrand = styled(Navbar.Brand)`
-  padding: 15px;
+  padding: 10px;
 
   @media ${devices.sm} {
     padding: 5px;
@@ -31,7 +31,7 @@ const Header = () => (
         <NavbarBrand href="#home">
           <img
             src={logo}
-            height="30"
+            height="40"
             className="d-inline-block align-top"
             alt="Alluminy Esquadrias de Alumínio"
           />

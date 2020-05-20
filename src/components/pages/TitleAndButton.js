@@ -4,13 +4,14 @@ import styled from "styled-components"
 import ActionButton from "../ActionButton"
 
 const Section = styled.section`
-  padding: 5rem 3rem;
+  padding: 7rem 3rem;
 `
 
 const Title = styled.h3`
   font-size: 36px;
   font-weight: 400;
   margin-bottom: 1rem;
+  line-height: 1.5;
 `
 
 const TitleAndButton = () => (

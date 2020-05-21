@@ -10,6 +10,12 @@ import ActionButtonFooter from "./ActionButtonFooter"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { devices } from "../constants"
 
+const Body = styled.div`
+  @media ${devices.sm} {
+    padding-bottom: 60px;
+  }
+`
+
 const Main = styled.main`
   margin-top: 76px;
 
@@ -19,13 +25,13 @@ const Main = styled.main`
 `
 
 const Layout = ({ children }) => (
-  <>
+  <Body>
     <Head />
     <Header />
     <Main>{children}</Main>
     <Footer />
     <ActionButtonFooter />
-  </>
+  </Body>
 )
 
 Layout.propTypes = {

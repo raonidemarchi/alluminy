@@ -1,6 +1,14 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
 
+import {
+  alluminyPhone,
+  alluminyWhatsApp,
+  alluminyGoogleMapsAddress,
+  alluminyEmail,
+  alluminyFacebook,
+  alluminyInstagram,
+} from "../constants"
 import { getCurrentYear } from "../helpers/date"
 import logo from "../images/logo.png"
 
@@ -19,7 +27,7 @@ const Footer = () => (
                 className="text-muted"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://goo.gl/maps/r1vn7NtKVJD4JZxx5"
+                href={alluminyGoogleMapsAddress}
               >
                 R. José Francisco Ceccon, 104
                 <br />
@@ -32,8 +40,8 @@ const Footer = () => (
           <h5 className="h6 mt-4">Telefone</h5>
           <ul className="list-unstyled">
             <li>
-              <a className="text-muted" href="tel:(19) 3394-3654">
-                (19) 3394-3654
+              <a className="text-muted" href={`tel:${alluminyPhone}`}>
+                {alluminyPhone}
               </a>
             </li>
           </ul>
@@ -44,9 +52,9 @@ const Footer = () => (
                 className="text-muted"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://api.whatsapp.com/send?phone=+5519992030454"
+                href={`https://api.whatsapp.com/send?phone=${alluminyWhatsApp}`}
               >
-                (19) 99203-0454
+                {alluminyWhatsApp}
               </a>
             </li>
           </ul>
@@ -59,9 +67,9 @@ const Footer = () => (
                 className="text-muted"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="mailto:atendimento.alluminy@outlook.com"
+                href={`mailto:${alluminyEmail}`}
               >
-                atendimento.alluminy@outlook.com
+                {alluminyEmail}
               </a>
             </li>
           </ul>
@@ -72,7 +80,7 @@ const Footer = () => (
                 className="text-muted"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.facebook.com/Alluminy-Esquadrias-de-Alum%C3%ADnio-1446937995598231/"
+                href={alluminyFacebook}
               >
                 Facebook
               </a>
@@ -82,7 +90,7 @@ const Footer = () => (
                 className="text-muted"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/alluminyesquadrias/"
+                href={alluminyInstagram}
               >
                 Instagram
               </a>

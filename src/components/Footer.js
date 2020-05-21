@@ -8,6 +8,7 @@ import {
   alluminyEmail,
   alluminyFacebook,
   alluminyInstagram,
+  whatsappApi,
 } from "../constants"
 import { getCurrentYear } from "../helpers/date"
 import logo from "../images/logo.png"
@@ -52,7 +53,7 @@ const Footer = () => (
                 className="text-muted"
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`https://api.whatsapp.com/send?phone=${alluminyWhatsApp}`}
+                href={whatsappApi(alluminyWhatsApp)}
               >
                 {alluminyWhatsApp}
               </a>

@@ -19,7 +19,9 @@ const TitleAndButton = () => (
     <Title className="text-uppercase display-5">
       Vamos construir seu sonho juntos.
     </Title>
-    <ActionButton className="mt-3">Entre em contato</ActionButton>
+    <ActionButton className="mt-3 d-none d-md-inline-block">
+      Entre em contato
+    </ActionButton>
   </Section>
 )
 

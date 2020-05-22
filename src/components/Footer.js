@@ -64,7 +64,7 @@ const Footer = ({ className }) => (
           </ul>
         </Col>
         <Col sm={12} md={6} lg={4}>
-          <h5 className="h6">E-mail</h5>
+          <h5 className="h6 mt-2 mt-md-0">E-mail</h5>
           <ul className="list-unstyled">
             <li>
               <a
@@ -77,7 +77,7 @@ const Footer = ({ className }) => (
               </a>
             </li>
           </ul>
-          <h5 className="h6">Redes Sociais</h5>
+          <h5 className="h6 mt-4">Redes Sociais</h5>
           <ul className="list-unstyled">
             <li>
               <a

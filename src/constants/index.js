@@ -11,5 +11,5 @@ export const alluminyEmail = "atendimento.alluminy@outlook.com"
 export const alluminyFacebook =
   "https://www.facebook.com/Alluminy-Esquadrias-de-Alum%C3%ADnio-1446937995598231/"
 export const alluminyInstagram = "https://www.instagram.com/alluminyesquadrias/"
-export const whatsappApi = number =>
+export const getWhatsAppApi = number =>
   `https://api.whatsapp.com/send?phone=${number}`

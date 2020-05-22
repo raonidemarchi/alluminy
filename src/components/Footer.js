@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Row, Col } from "react-bootstrap"
 
 import {
@@ -8,13 +9,15 @@ import {
   alluminyEmail,
   alluminyFacebook,
   alluminyInstagram,
-  whatsappApi,
+  getWhatsAppApi,
 } from "../constants"
 import { getCurrentYear } from "../helpers/date"
 import logo from "../images/logo.png"
 
-const Footer = () => (
-  <footer className="mt-5 px-3 container text-center text-lg-left">
+const Footer = ({ className }) => (
+  <footer
+    className={`${className} mt-5 px-3 container text-center text-lg-left`}
+  >
     <div className="py-4 pt-md-5 border-top">
       <Row>
         <Col sm={12} md={12} lg={4}>
@@ -53,7 +56,7 @@ const Footer = () => (
                 className="text-muted"
                 target="_blank"
                 rel="noopener noreferrer"
-                href={whatsappApi(alluminyWhatsApp)}
+                href={getWhatsAppApi(alluminyWhatsApp)}
               >
                 {alluminyWhatsApp}
               </a>
@@ -107,5 +110,13 @@ const Footer = () => (
     </div>
   </footer>
 )
+
+Footer.defaultProps = {
+  className: "",
+}
+
+Footer.propTypes = {
+  className: PropTypes.node,
+}
 
 export default Footer

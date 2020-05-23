@@ -6,6 +6,7 @@ import Head from "./Head"
 import Header from "./Header"
 import Footer from "./Footer"
 import ActionButtonFooter from "./ActionButtonFooter"
+import Modal from "./Modal"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import { devices } from "../constants"
@@ -31,6 +32,7 @@ const Layout = ({ children }) => (
     <Main>{children}</Main>
     <PageFooter />
     <ActionButtonFooter />
+    {/* <Modal /> */}
   </>
 )
 

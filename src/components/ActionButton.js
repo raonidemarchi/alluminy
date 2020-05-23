@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Button } from "react-bootstrap"
 import styled from "styled-components"
 
-const PrimaryButton = styled(Button)`
+const Btn = styled(Button)`
   font-size: 12px !important;
   text-transform: uppercase;
   font-weight: bold;
@@ -25,9 +25,9 @@ const PrimaryButton = styled(Button)`
 `
 
 const ActionButton = ({ children, className, height, width }) => (
-  <PrimaryButton height={height} width={width} className={className}>
+  <Btn height={height} width={width} className={className}>
     {children}
-  </PrimaryButton>
+  </Btn>
 )
 
 ActionButton.defaultProps = {
@@ -38,9 +38,9 @@ ActionButton.defaultProps = {
 
 ActionButton.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.node,
-  height: PropTypes.node,
-  width: PropTypes.node,
+  className: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string,
 }
 
 export default ActionButton

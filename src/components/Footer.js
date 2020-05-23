@@ -116,7 +116,7 @@ Footer.defaultProps = {
 }
 
 Footer.propTypes = {
-  className: PropTypes.node,
+  className: PropTypes.string,
 }
 
 export default Footer

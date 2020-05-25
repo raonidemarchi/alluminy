@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Modal, ListGroup } from "react-bootstrap"
 
@@ -20,8 +21,8 @@ const Icon = styled.i`
   }
 `
 
-const ActionModal = () => (
-  <Modal show={true}>
+const ActionModal = ({ show, toggleModal }) => (
+  <Modal show={show} onHide={toggleModal}>
     <Modal.Header className="border-0">
       <strong className="modal-title text-secondary">Entre em contato</strong>
       <button
@@ -81,5 +82,14 @@ const ActionModal = () => (
     </Modal.Body>
   </Modal>
 )
+
+ActionModal.defaultProps = {
+  show: false,
+}
+
+ActionModal.propTypes = {
+  show: PropTypes.bool,
+  toggleModal: PropTypes.func.isRequired,
+}
 
 export default ActionModal

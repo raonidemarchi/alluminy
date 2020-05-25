@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Button } from "react-bootstrap"
 import styled from "styled-components"
+import { Button } from "react-bootstrap"
 
 const Btn = styled(Button)`
   font-size: 12px !important;
@@ -24,8 +24,8 @@ const Btn = styled(Button)`
   }
 `
 
-const ActionButton = ({ children, className, height, width }) => (
-  <Btn height={height} width={width} className={className}>
+const ActionButton = ({ children, className, height, width, onClick }) => (
+  <Btn height={height} width={width} className={className} onClick={onClick}>
     {children}
   </Btn>
 )
@@ -41,6 +41,7 @@ ActionButton.propTypes = {
   className: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default ActionButton

@@ -7,6 +7,7 @@ import ProjectTypes from "../components/pages/ProjectTypes"
 import OurAdvantages from "../components/pages/OurAdvantages"
 import ProjectsGallery from "../components/pages/ProjectsGallery"
 import TitleAndButton from "../components/pages/TitleAndButton"
+// import ActionModal from "../components/ActionModal"
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <OurAdvantages />
     <ProjectsGallery />
     <TitleAndButton />
+    {/* <ActionModal /> */}
   </Layout>
 )
 

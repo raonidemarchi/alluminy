@@ -1,7 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Modal, ListGroup } from "react-bootstrap"
+
+import {
+  alluminyPhone,
+  alluminyWhatsApp,
+  alluminyEmail,
+  getWhatsAppApi,
+} from "../constants"
 
 const ListItem = styled.a`
   display: flex;
@@ -10,19 +17,24 @@ const ListItem = styled.a`
   cursor: pointer;
 `
 
-const Icon = styled.i`
-  font-size: 2.6rem;
-  margin: 0 1.4rem;
+const IconContainer = styled.i`
+  display: flex;
+  width: 100px;
+  justify-content: center;
 
-  &:before {
-    background: linear-gradient(to bottom, #4bdfd8, #3a9fe0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  i {
+    font-size: 2rem;
+
+    &:before {
+      background: linear-gradient(to bottom, #4bdfd8, #3a9fe0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 `
 
-const ActionModal = ({ show, toggleModal }) => (
-  <Modal show={show} onHide={toggleModal}>
+const ActionModal = props => (
+  <Modal show={true}>
     <Modal.Header className="border-0">
       <strong className="modal-title text-secondary">Entre em contato</strong>
       <button
@@ -37,12 +49,14 @@ const ActionModal = ({ show, toggleModal }) => (
     <Modal.Body className="p-0">
       <ListGroup>
         <ListItem
-          href="https://www.santander.com.br/2-via-boleto"
+          href={getWhatsAppApi(alluminyWhatsApp)}
           target="_blank"
           rel="noopener noreferrer"
           className="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0 border-light py-4 px-2"
         >
-          <Icon className="fab fa-whatsapp" />
+          <IconContainer>
+            <i className="fab fa-whatsapp" />
+          </IconContainer>
           <div className="media-body">
             <h5 className="mt-0 mb-0 open-sans font-weight-bold">WhatsApp</h5>
             <span className="text-muted small">
@@ -51,12 +65,14 @@ const ActionModal = ({ show, toggleModal }) => (
           </div>
         </ListItem>
         <ListItem
-          href="https://banco.bradesco/html/classic/produtos-servicos/mais-produtos-servicos/segunda-via-boleto.shtm"
+          href={`mailto:${alluminyEmail}`}
           target="_blank"
           rel="noopener noreferrer"
           className="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0 border-light py-3 px-2"
         >
-          <Icon className="fas fa-inbox" />
+          <IconContainer>
+            <i className="far fa-envelope" />
+          </IconContainer>
           <div className="media-body">
             <h5 className="mt-0 mb-1 open-sans font-weight-bold">E-mail</h5>
             <span className="text-muted small">
@@ -65,12 +81,12 @@ const ActionModal = ({ show, toggleModal }) => (
           </div>
         </ListItem>
         <ListItem
-          href="https://www.sicredi.com.br/segundaviaboleto/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={`tel:${alluminyPhone}`}
           className="list-group-item list-group-item-action border-0 pt-3 px-2"
         >
-          <Icon className="fas fa-headset" />
+          <IconContainer>
+            <i className="fas fa-headset" />
+          </IconContainer>
           <div className="media-body">
             <h5 className="mt-0 mb-1 open-sans font-weight-bold">Telefone</h5>
             <span className="text-muted small">
@@ -89,7 +105,7 @@ ActionModal.defaultProps = {
 
 ActionModal.propTypes = {
   show: PropTypes.bool,
-  toggleModal: PropTypes.func.isRequired,
+  toggleModal: PropTypes.func,
 }
 
 export default ActionModal

@@ -67,7 +67,7 @@ const Img = styled.div`
 `
 
 const ProjectsGallery = () => (
-  <Section className="bg-light py-3">
+  <Section className="bg-light py-3" id="ourProjects">
     <h2 className="text-center text-uppercase display-5">Nossas obras</h2>
 
     <Grid>

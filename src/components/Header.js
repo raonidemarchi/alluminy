@@ -29,7 +29,7 @@ const Header = () => (
   <header>
     <Navbar bg="white" expand="md" fixed="top" className="shadow-sm">
       <Container>
-        <NavbarBrand href="#home">
+        <NavbarBrand href="#">
           <img
             src={logo}
             height="40"
@@ -43,16 +43,19 @@ const Header = () => (
           id="navbarSupportedContent"
         >
           <Nav className="align-items-center">
-            <NavLink className="nav-link py-3 py-md-0 px-3" href="#projetos">
+            <NavLink
+              className="nav-link py-3 py-md-0 px-3"
+              href="#projectTypes"
+            >
               Projetos
             </NavLink>
             <NavLink
               className="nav-link py-3 py-md-0 px-3"
-              href="#diferenciais"
+              href="#ourAdvantages"
             >
               Diferenciais
             </NavLink>
-            <NavLink className="nav-link py-3 py-md-0 px-3" href="#obras">
+            <NavLink className="nav-link py-3 py-md-0 px-3" href="#ourProjects">
               Obras
             </NavLink>
             <ModalConsumer>

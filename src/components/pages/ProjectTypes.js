@@ -11,7 +11,7 @@ import fifthProject from "../../images/project-types/project-5.jpg"
 import { devices } from "../../constants"
 
 const Section = styled.section`
-  margin: 4rem 0;
+  margin: 4rem 0 0;
 `
 
 const SectionContainer = styled(Container)`
@@ -47,7 +47,7 @@ const SectionRow = styled(Row)`
 `
 
 const WhoAreWe = () => (
-  <Section className="bg-light pb-4">
+  <Section className="bg-light pb-4" id="projectTypes">
     <SectionContainer fluid>
       <SectionRow className="mb-5">
         <Col md={6}>

@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Section = styled.section`
   max-width: 900px;
-  padding: 2rem 2rem 5rem;
+  padding: 6rem 2rem 5rem;
 
   p {
     max-width: 600px;
@@ -34,7 +34,7 @@ const Icon = styled.i`
 `
 
 const OurAdvantages = () => (
-  <Section className="text-center container">
+  <Section className="text-center container" id="ourAdvantages">
     <h2 className="text-uppercase display-5">Nossos Diferenciais</h2>
     <p className="lead text-muted">
       Fazemos tudo com atenção aos detalhes, desde a fabricação e instalação até

@@ -33,18 +33,10 @@ const IconContainer = styled.i`
   }
 `
 
-const ActionModal = props => (
-  <Modal show={true}>
-    <Modal.Header className="border-0">
+const ActionModal = () => (
+  <Modal show={true} onHide={() => alert("teste")} centered>
+    <Modal.Header className="border-0" closeButton>
       <strong className="modal-title text-secondary">Entre em contato</strong>
-      <button
-        type="button"
-        className="close"
-        data-dismiss="modal"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
     </Modal.Header>
     <Modal.Body className="p-0">
       <ListGroup>

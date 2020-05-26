@@ -18,7 +18,7 @@ const ModalContent = styled(Modal)`
 
 const ListItem = styled.a`
   display: flex;
-  padding: 1.6rem 1rem 1.6rem 0;
+  padding: 1.6rem 0;
   align-items: center;
 `
 
@@ -37,6 +37,13 @@ const IconContainer = styled.div`
   }
 `
 
+const CaretContainer = styled.div`
+  width: 44px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ddd;
+`
+
 const ActionModal = () => (
   <ModalConsumer>
     {({ show, toggleModal }) => (
@@ -46,7 +53,7 @@ const ActionModal = () => (
             Entre em contato
           </strong>
         </Modal.Header>
-        <Modal.Body className="p-0">
+        <Modal.Body className="p-0 pb-1">
           <ListGroup>
             <ListItem
               href={getWhatsAppApi(alluminyWhatsApp)}
@@ -58,13 +65,14 @@ const ActionModal = () => (
                 <i className="fab fa-whatsapp" />
               </IconContainer>
               <div className="media-body">
-                <h5 className="mt-0 mb-0 open-sans font-weight-bold">
-                  WhatsApp
-                </h5>
-                <span className="text-muted small">
+                <h5 className="mt-0 font-weight-bold">WhatsApp</h5>
+                <p className="text-muted small mb-0">
                   Inicie uma conversa no WhatsApp com um de nossos especilistas.
-                </span>
+                </p>
               </div>
+              <CaretContainer>
+                <i className="fas fa-angle-right" />
+              </CaretContainer>
             </ListItem>
             <ListItem
               href={`mailto:${alluminyEmail}`}
@@ -76,11 +84,14 @@ const ActionModal = () => (
                 <i className="far fa-envelope" />
               </IconContainer>
               <div className="media-body">
-                <h5 className="mt-0 mb-1 open-sans font-weight-bold">E-mail</h5>
-                <span className="text-muted small">
+                <h5 className="mt-0 font-weight-bold">E-mail</h5>
+                <p className="text-muted small mb-0">
                   Envie um e-mail para nós e te responderemos em breve.
-                </span>
+                </p>
               </div>
+              <CaretContainer>
+                <i className="fas fa-angle-right" />
+              </CaretContainer>
             </ListItem>
             <ListItem
               href={`tel:${alluminyPhone}`}
@@ -90,13 +101,14 @@ const ActionModal = () => (
                 <i className="fas fa-headset" />
               </IconContainer>
               <div className="media-body">
-                <h5 className="mt-0 mb-1 open-sans font-weight-bold">
-                  Telefone
-                </h5>
-                <span className="text-muted small">
+                <h5 className="mt-0 font-weight-bold">Telefone</h5>
+                <p className="text-muted small mb-0">
                   Ligue para nós, um de nossos especialistas irá te atender.{" "}
-                </span>
+                </p>
               </div>
+              <CaretContainer>
+                <i className="fas fa-angle-right" />
+              </CaretContainer>
             </ListItem>
           </ListGroup>
         </Modal.Body>

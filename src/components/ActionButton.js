@@ -41,7 +41,7 @@ ActionButton.propTypes = {
   className: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 }
 
 export default ActionButton

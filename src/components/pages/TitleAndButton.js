@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import { ModalConsumer } from "../contexts/ModalContext"
 import ActionButton from "../ActionButton"
 
 const Section = styled.section`
@@ -19,9 +20,16 @@ const TitleAndButton = () => (
     <Title className="text-uppercase display-5">
       Vamos construir seu sonho juntos.
     </Title>
-    <ActionButton className="mt-3 d-none d-md-inline-block">
-      Entre em contato
-    </ActionButton>
+    <ModalConsumer>
+      {({ toggleModal }) => (
+        <ActionButton
+          className="mt-3 d-none d-md-inline-block"
+          onClick={toggleModal}
+        >
+          Entre em contato
+        </ActionButton>
+      )}
+    </ModalConsumer>
   </Section>
 )
 

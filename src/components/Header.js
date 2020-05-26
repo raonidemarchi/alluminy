@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import ActionButton from "./ActionButton"
 import { devices } from "../constants"
+import { ModalConsumer } from "./contexts/ModalContext"
 
 import logo from "../images/logo.png"
 
@@ -54,9 +55,16 @@ const Header = () => (
             <NavLink className="nav-link py-3 py-md-0 px-3" href="#obras">
               Obras
             </NavLink>
-            <ActionButton className="d-none d-md-block ml-4">
-              Entre em contato
-            </ActionButton>
+            <ModalConsumer>
+              {({ toggleModal }) => (
+                <ActionButton
+                  className="d-none d-md-block ml-4"
+                  onClick={toggleModal}
+                >
+                  Entre em contato
+                </ActionButton>
+              )}
+            </ModalConsumer>
           </Nav>
         </Navbar.Collapse>
       </Container>

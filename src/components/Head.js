@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { googleSiteVerificationCode } from "../constants"
 import favicon from "../images/favicon.png"
 
 function Head({ description, lang, meta, title }) {
@@ -73,6 +74,10 @@ function Head({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `google-site-verification`,
+          content: googleSiteVerificationCode,
         },
       ].concat(meta)}
     />

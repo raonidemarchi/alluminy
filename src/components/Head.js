@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { googleSiteVerificationCode } from "../constants"
 import favicon from "../images/favicon.png"
-import logoText from "../images/logo-text.jpg"
 
 function Head({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -16,6 +15,7 @@ function Head({ description, lang, meta, title }) {
             title
             description
             url
+            image
           }
         }
       }
@@ -24,6 +24,7 @@ function Head({ description, lang, meta, title }) {
 
   const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = `${site.siteMetadata.url}${site.siteMetadata.image}`
 
   return (
     <Helmet
@@ -71,7 +72,7 @@ function Head({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: logoText,
+          content: metaImage,
         },
         {
           name: `twitter:card`,
@@ -91,7 +92,7 @@ function Head({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: logoText,
+          content: metaImage,
         },
         {
           name: `google-site-verification`,

@@ -44,6 +44,10 @@ function Head({ description, lang, meta, title }) {
           type: `image/png`,
           href: favicon,
         },
+        {
+          rel: `canonical`,
+          href= site.siteMetadata.url
+        }
       ]}
       meta={[
         {

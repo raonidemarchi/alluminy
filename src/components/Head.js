@@ -15,7 +15,7 @@ function Head({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            author
+            url
           }
         }
       }

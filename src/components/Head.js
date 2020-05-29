@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { googleSiteVerificationCode } from "../constants"
 import favicon from "../images/favicon.png"
+import logoText from "../images/logo-text.jpg"
 
 function Head({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -21,6 +22,7 @@ function Head({ description, lang, meta, title }) {
     `
   )
 
+  const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -28,7 +30,7 @@ function Head({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title || site.siteMetadata.title}
+      title={metaTitle}
       script={[
         {
           src: `https://kit.fontawesome.com/9a48c7250f.js`,
@@ -43,6 +45,10 @@ function Head({ description, lang, meta, title }) {
         },
       ]}
       meta={[
+        {
+          name: `title`,
+          content: metaTitle,
+        },
         {
           name: `description`,
           content: metaDescription,
@@ -60,12 +66,16 @@ function Head({ description, lang, meta, title }) {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          property: `og:url`,
+          content: site.siteMetadata.url,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          property: `og:image`,
+          content: logoText,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
         },
         {
           name: `twitter:title`,
@@ -74,6 +84,14 @@ function Head({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:url`,
+          content: site.siteMetadata.url,
+        },
+        {
+          property: `twitter:image`,
+          content: logoText,
         },
         {
           name: `google-site-verification`,

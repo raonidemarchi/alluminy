@@ -46,7 +46,7 @@ function Head({ description, lang, meta, title }) {
         },
         {
           rel: `canonical`,
-          href: site.siteMetadata.url,
+          href: `${site.siteMetadata.url}/`,
         },
         bootstrapCdn,
       ]}

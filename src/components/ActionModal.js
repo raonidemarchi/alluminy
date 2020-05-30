@@ -17,8 +17,8 @@ const ModalContent = styled(Modal)`
 `
 
 const ListItem = styled.a`
-  display: flex;
-  padding: 1.6rem 0;
+  display: flex !important;
+  padding: 1.6rem 0 !important;
   align-items: center;
 `
 

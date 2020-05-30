@@ -8,7 +8,7 @@ const Btn = styled(Button)`
   text-transform: uppercase;
   font-weight: bold;
   background-image: linear-gradient(to right, #4bdfd8, #3a9fe0);
-  border: 0;
+  border: 0 !important;
   color: #fff;
   border-radius: 2px;
   height: ${({ height }) => height || "50px"};

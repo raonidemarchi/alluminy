@@ -8,7 +8,6 @@ import Footer from "./Footer"
 import ActionButtonFooter from "./ActionButtonFooter"
 import ActionModal from "./ActionModal"
 
-import "bootstrap/dist/css/bootstrap.min.css"
 import { devices } from "../constants"
 
 const Main = styled.main`

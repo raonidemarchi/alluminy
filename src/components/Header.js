@@ -9,10 +9,10 @@ import { ModalConsumer } from "./contexts/ModalContext"
 import logo from "../images/logo.png"
 
 const NavbarBrand = styled(Navbar.Brand)`
-  padding: 10px;
+  padding: 10px !important;
 
   @media ${devices.sm} {
-    padding: 5px;
+    padding: 5px !important;
   }
 `
 

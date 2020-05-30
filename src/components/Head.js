@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { googleSiteVerificationCode } from "../constants"
+import { bootstrapCdn, googleSiteVerificationCode } from "../constants"
 import favicon from "../images/favicon.png"
 import logoText from "../images/logo-text.jpg"
 
@@ -48,6 +48,7 @@ function Head({ description, lang, meta, title }) {
           rel: `canonical`,
           href: site.siteMetadata.url,
         },
+        bootstrapCdn,
       ]}
       meta={[
         {

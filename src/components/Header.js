@@ -29,7 +29,7 @@ const Header = () => (
   <header>
     <Navbar bg="white" expand="md" fixed="top" className="shadow-sm">
       <Container>
-        <NavbarBrand href="">
+        <NavbarBrand href="#">
           <img
             src={logo}
             height="40"

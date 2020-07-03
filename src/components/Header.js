@@ -1,5 +1,6 @@
 import React from "react"
 import { Nav, Navbar, Container } from "react-bootstrap"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styled from "styled-components"
 
 import ActionButton from "./ActionButton"
@@ -8,7 +9,7 @@ import { ModalConsumer } from "./contexts/ModalContext"
 
 import logo from "../images/logo.png"
 
-const NavbarBrand = styled(Navbar.Brand)`
+const NavbarBrand = styled(AnchorLink)`
   padding: 10px !important;
 
   @media ${devices.sm} {
@@ -16,7 +17,7 @@ const NavbarBrand = styled(Navbar.Brand)`
   }
 `
 
-const NavLink = styled(Nav.Link)`
+const NavLink = styled(AnchorLink)`
   font-size: 14px;
   text-transform: uppercase;
 `
@@ -26,10 +27,10 @@ const NavbarToggle = styled(Navbar.Toggle)`
 `
 
 const Header = () => (
-  <header>
+  <header id="home">
     <Navbar bg="white" expand="md" fixed="top" className="shadow-sm">
       <Container>
-        <NavbarBrand href="#">
+        <NavbarBrand className="navbar-brand" to="/#home">
           <img
             src={logo}
             height="40"
@@ -43,19 +44,16 @@ const Header = () => (
           id="navbarSupportedContent"
         >
           <Nav className="align-items-center">
-            <NavLink
-              className="nav-link py-3 py-md-0 px-3"
-              href="#projectTypes"
-            >
+            <NavLink className="nav-link py-3 py-md-0 px-3" to="/#projectTypes">
               Projetos
             </NavLink>
             <NavLink
               className="nav-link py-3 py-md-0 px-3"
-              href="#ourAdvantages"
+              to="/#ourAdvantages"
             >
               Diferenciais
             </NavLink>
-            <NavLink className="nav-link py-3 py-md-0 px-3" href="#ourProjects">
+            <NavLink className="nav-link py-3 py-md-0 px-3" to="/#ourProjects">
               Obras
             </NavLink>
             <ModalConsumer>

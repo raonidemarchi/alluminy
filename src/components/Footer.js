@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Row, Col } from "react-bootstrap"
+import styled from "styled-components"
 
 import {
   alluminyPhone,
@@ -13,6 +14,10 @@ import {
 } from "../constants"
 import { getCurrentYear } from "../helpers/date"
 import logo from "../images/logo.png"
+
+const Icon = styled.i`
+  margin-right: 2px;
+`
 
 const Footer = ({ className }) => (
   <footer
@@ -86,7 +91,7 @@ const Footer = ({ className }) => (
                 rel="noopener noreferrer"
                 href={alluminyFacebook}
               >
-                Facebook
+                <Icon className="fab fa-facebook-square" /> Facebook
               </a>
             </li>
             <li>
@@ -96,7 +101,7 @@ const Footer = ({ className }) => (
                 rel="noopener noreferrer"
                 href={alluminyInstagram}
               >
-                Instagram
+                <Icon className="fab fa-instagram-square" /> Instagram
               </a>
             </li>
           </ul>

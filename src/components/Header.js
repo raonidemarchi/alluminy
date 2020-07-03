@@ -29,11 +29,11 @@ const NavbarToggle = styled(Navbar.Toggle)`
 const Header = () => {
   const [expanded, setExpanded] = useState(false)
 
-  function toggleMobileNavItems() {
+  const toggleMobileNavItems = () => {
     setExpanded(!expanded)
   }
 
-  function hideMobileNavItems() {
+  const hideMobileNavItems = () => {
     setExpanded(false)
   }
 

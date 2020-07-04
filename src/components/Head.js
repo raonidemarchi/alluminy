@@ -15,7 +15,7 @@ function Head({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            url
+            siteUrl
           }
         }
       }
@@ -24,7 +24,7 @@ function Head({ description, lang, meta, title }) {
 
   const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = `${site.siteMetadata.url}${logoText}`
+  const metaImage = `${site.siteMetadata.siteUrl}${logoText}`
 
   return (
     <Helmet
@@ -46,7 +46,7 @@ function Head({ description, lang, meta, title }) {
         },
         {
           rel: `canonical`,
-          href: `${site.siteMetadata.url}/`,
+          href: `${site.siteMetadata.siteUrl}/`,
         },
         bootstrapCdn,
       ]}
@@ -73,7 +73,7 @@ function Head({ description, lang, meta, title }) {
         },
         {
           property: `og:url`,
-          content: site.siteMetadata.url,
+          content: site.siteMetadata.siteUrl,
         },
         {
           property: `og:image`,
@@ -93,7 +93,7 @@ function Head({ description, lang, meta, title }) {
         },
         {
           name: `twitter:url`,
-          content: site.siteMetadata.url,
+          content: site.siteMetadata.siteUrl,
         },
         {
           property: `twitter:image`,

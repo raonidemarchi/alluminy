@@ -30,7 +30,7 @@ const Footer = ({ className }) => (
             className="mb-5"
             src={logo}
             alt="Alluminy Esquadrias de Alumínio - Sua obra merece"
-            height="90"
+            height="100"
           />
         </Col>
         <Col sm={12} md={6} lg={4}>

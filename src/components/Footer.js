@@ -13,7 +13,7 @@ import {
   getWhatsAppApi,
 } from "../constants"
 import { getCurrentYear } from "../helpers/date"
-import logo from "../images/logo.png"
+import logo from "../images/logo-text.jpg"
 
 const Icon = styled.i`
   margin-right: 2px;
@@ -26,7 +26,12 @@ const Footer = ({ className }) => (
     <div className="py-4 pt-md-5 border-top">
       <Row>
         <Col sm={12} md={12} lg={4}>
-          <img className="mb-5" src={logo} alt="" height="50" />
+          <img
+            className="mb-5"
+            src={logo}
+            alt="Alluminy Esquadrias de Alumínio - Sua obra merece"
+            height="90"
+          />
         </Col>
         <Col sm={12} md={6} lg={4}>
           <h5 className="h6">Endereço</h5>

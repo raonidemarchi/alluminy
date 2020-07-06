@@ -60,6 +60,10 @@ function Head({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `keywords`,
+          content: `alluminy, esquadrias de alumínio, esquadrias, construção`,
+        },
+        {
           property: `og:title`,
           content: title,
         },

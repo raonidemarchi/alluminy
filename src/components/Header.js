@@ -7,7 +7,7 @@ import ActionButton from "./ActionButton"
 import { devices } from "../constants"
 import { ModalConsumer } from "./contexts/ModalContext"
 
-import logo from "../images/logo.png"
+import logo from "../images/logo.webp"
 
 const NavbarBrand = styled(AnchorLink)`
   padding: 10px !important;

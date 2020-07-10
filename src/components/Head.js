@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { bootstrapCdn, googleSiteVerificationCode } from "../constants"
-import favicon from "../images/favicon.png"
-import logoText from "../images/logo-text.jpg"
+import favicon from "../images/favicon.webp"
+import logoText from "../images/logo-text.webp"
 
 function Head({ description, lang, meta, title }) {
   const { site } = useStaticQuery(

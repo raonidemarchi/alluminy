@@ -2,11 +2,11 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import styled from "styled-components"
 
-import firstProject from "../../images/project-types/project-1.jpg"
-import secondProject from "../../images/project-types/project-2.jpg"
-import thirdProject from "../../images/project-types/project-3.jpg"
-import fourthProject from "../../images/project-types/project-4.jpg"
-import fifthProject from "../../images/project-types/project-5.jpg"
+import firstProject from "../../images/project-types/project-1.webp"
+import secondProject from "../../images/project-types/project-2.webp"
+import thirdProject from "../../images/project-types/project-3.webp"
+import fourthProject from "../../images/project-types/project-4.webp"
+import fifthProject from "../../images/project-types/project-5.webp"
 
 import { devices } from "../../constants"
 

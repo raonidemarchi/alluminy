@@ -13,7 +13,7 @@ import {
   getWhatsAppApi,
 } from "../constants"
 import { getCurrentYear } from "../helpers/date"
-import logo from "../images/logo-text.jpg"
+import logo from "../images/logo-text.webp"
 
 const Icon = styled.i`
   margin-right: 2px;

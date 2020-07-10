@@ -5,7 +5,7 @@ import { devices } from "../../constants"
 import { ModalConsumer } from "../contexts/ModalContext"
 import ActionButton from "../ActionButton"
 
-import banner from "../../images/banner-1.jpg"
+import banner from "../../images/banner-1.webp"
 
 const Section = styled.section`
   min-height: 400px;

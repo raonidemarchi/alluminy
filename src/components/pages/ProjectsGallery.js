@@ -57,6 +57,7 @@ const Img = styled.div`
   grid-column: span ${({ colSpan }) => colSpan || 1};
 
   @media ${devices.sm} {
+    background-image: url('${({ src, srcSm }) => srcSm || src}');
     grid-row: span ${({ rowSpanSm, rowSpan }) => rowSpanSm || rowSpan || 1};
     grid-column: span ${({ colSpanSm, colSpan }) => colSpanSm || colSpan || 1};
   }

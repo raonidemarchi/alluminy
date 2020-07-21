@@ -5,7 +5,8 @@ import { devices } from "../../constants"
 import { ModalConsumer } from "../contexts/ModalContext"
 import ActionButton from "../ActionButton"
 
-import banner from "../../images/banner-1.webp"
+import banner from "../../images/banner.webp"
+import bannerSm from "../../images/sm/banner.webp"
 
 const Section = styled.section`
   min-height: 400px;
@@ -14,6 +15,10 @@ const Section = styled.section`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media ${devices.sm} {
+    background-image: url("${bannerSm}");
+  }
 
   &, & > div {
     height: calc(100vh - 76px);

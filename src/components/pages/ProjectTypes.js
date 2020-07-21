@@ -8,6 +8,12 @@ import thirdProject from "../../images/project-types/project-3.webp"
 import fourthProject from "../../images/project-types/project-4.webp"
 import fifthProject from "../../images/project-types/project-5.webp"
 
+import firstProjectSm from "../../images/project-types/sm/project-1.webp"
+import secondProjectSm from "../../images/project-types/sm/project-2.webp"
+import thirdProjectSm from "../../images/project-types/sm/project-3.webp"
+import fourthProjectSm from "../../images/project-types/sm/project-4.webp"
+import fifthProjectSm from "../../images/project-types/sm/project-5.webp"
+
 import { devices } from "../../constants"
 
 const Section = styled.section`
@@ -26,6 +32,7 @@ const Img = styled.div`
   margin: ${({ mt }) => mt || 0}px -15px 0;
 
   @media ${devices.sm} {
+    background-image: url('${({ src, srcSm }) => srcSm || src}');
     margin-left: -30px;
     margin-right: -30px;
   }
@@ -51,7 +58,7 @@ const WhoAreWe = () => (
     <SectionContainer fluid>
       <SectionRow className="mb-5">
         <Col md={6}>
-          <Img mt={-40} src={firstProject}></Img>
+          <Img mt={-40} src={firstProject} srcSm={firstProjectSm} />
         </Col>
         <Col
           md={{ span: 5, offset: 1 }}
@@ -85,12 +92,12 @@ const WhoAreWe = () => (
           xl={{ offset: 1 }}
           className="order-md-2"
         >
-          <Img src={secondProject}></Img>
+          <Img src={secondProject} srcSm={secondProjectSm} />
         </Col>
       </SectionRow>
       <SectionRow className="mb-5">
         <Col md={6}>
-          <Img src={thirdProject}></Img>
+          <Img src={thirdProject} srcSm={thirdProjectSm} />
         </Col>
         <Col
           md={{ span: 5, offset: 1 }}
@@ -125,12 +132,12 @@ const WhoAreWe = () => (
           xl={{ offset: 1 }}
           className="order-md-2"
         >
-          <Img src={fourthProject}></Img>
+          <Img src={fourthProject} srcSm={fourthProjectSm} />
         </Col>
       </SectionRow>
       <SectionRow className="mb-5">
         <Col md={6}>
-          <Img src={fifthProject}></Img>
+          <Img src={fifthProject} srcSm={fifthProjectSm} />
         </Col>
         <Col
           md={{ span: 5, offset: 1 }}

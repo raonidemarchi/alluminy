@@ -61,7 +61,7 @@ function Head({ description, lang, meta, title }) {
         },
         {
           name: `keywords`,
-          content: `alluminy, esquadrias de alumínio, esquadrias, construção`,
+          content: `alluminy, janela, porta, alumínio, esquadrias, construção`,
         },
         {
           property: `og:title`,

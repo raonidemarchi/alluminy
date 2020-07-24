@@ -17,5 +17,13 @@ module.exports = {
         offset: -100,
       },
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-173133111-1`,
+        head: false,
+        anonymize: true,
+      },
+    },
   ],
 }

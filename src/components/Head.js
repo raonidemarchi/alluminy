@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { bootstrapCdn, googleSiteVerificationCode } from "../constants"
-import favicon from "../images/favicon.webp"
+import favicon from "../images/favicon.ico"
 import logoText from "../images/logo-text.webp"
 
 function Head({ description, lang, meta, title }) {

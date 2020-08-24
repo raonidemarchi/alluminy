@@ -1,7 +1,7 @@
 export const alluminyPhone = "(19) 3394-3654"
 export const alluminyWhatsApp = "+55 (19) 99203-0454"
 export const alluminyGoogleMapsAddress = "https://g.page/Alluminy?share"
-export const alluminyEmail = "jrcerigatto@uol.com.br"
+export const alluminyEmail = "contato@alluminy.com.br"
 export const alluminyFacebook =
   "https://www.facebook.com/Alluminy-Esquadrias-de-Alum%C3%ADnio-1446937995598231/"
 export const alluminyInstagram = "https://www.instagram.com/alluminyesquadrias/"

@@ -7,7 +7,7 @@ import {
   alluminyPhone,
   alluminyWhatsApp,
   alluminyEmail,
-  getWhatsAppApi,
+  whatsapp,
 } from "../constants"
 
 const ModalContent = styled(Modal)`
@@ -56,7 +56,7 @@ const ActionModal = () => (
         <Modal.Body className="p-0 pb-1">
           <ListGroup>
             <ListItem
-              href={getWhatsAppApi(alluminyWhatsApp)}
+              href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0 border-light"

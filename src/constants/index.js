@@ -19,7 +19,7 @@ export const devices = {
   md: "(max-width: 992px)",
   lg: "(max-width: 1200px)",
 }
-export const getWhatsAppApi = number =>
-  `https://api.whatsapp.com/send?phone=${number}`
+export const whatsapp =
+  "https://api.whatsapp.com/send?phone=5519992030454"
 export const googleSiteVerificationCode =
   "pUHd0u4kpKC-LPAkhY7dctEshOOtlIuk9aVy3PpmMMo"

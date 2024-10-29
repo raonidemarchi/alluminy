@@ -12,12 +12,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.1.0
-        with:
-          node-version: 16
+        uses: actions/checkout@v4
         
       - name: Build and deploy
         uses: enriikke/gatsby-gh-pages-action@v2.2.1
